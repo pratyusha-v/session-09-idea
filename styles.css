@@ -1,8 +1,9 @@
 :root {
-    --primary-color: #f0d9e7;
-    --secondary-color: #d9e7f0;
-    --accent-color: #e7f0d9;
-    --text-color: #333;
+    --primary-color: #2c5530;
+    --secondary-color: #e7f0e7;
+    --accent-color: #d4e5d4;
+    --text-color: #1a2f4d;
+    --project-bg: #f5f8f5;
 }
 
 * {
@@ -82,17 +83,106 @@ nav {
     text-align: center;
 }
 
-.hero-image img {
+.hero-image .placeholder-circle {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 8px solid var(--accent-color);
+    background-color: var(--accent-color);
+    border: 8px solid var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.projects {
+    padding: 4rem 2rem;
+    background-color: var(--project-bg);
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    font-size: 2.5rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    background-color: var(--accent-color);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.project-content p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-content .tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.project-content .tag {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
         text-align: center;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .social-links {
+        margin-right: 0;
     }
 }
