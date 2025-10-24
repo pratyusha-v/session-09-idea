@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@300;400;500&family=Dancing+Script:wght@600&display=swap');
 
 :root {
     --primary-color: #2c5530;
@@ -40,9 +40,9 @@ nav {
 }
 
 .logo {
-    font-size: 2.2rem;
-    font-weight: bold;
-    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
     color: white;
     text-decoration: none;
     padding: 0.5rem 1.2rem;
@@ -340,6 +340,48 @@ nav {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
+    background-color: var(--primary-color);
+}
+
+.contact {
+    position: relative;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--project-bg);
+}
+
+.contact-container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.contact-btn:hover {
+    background-color: #234227;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
     background-color: var(--primary-color);
 }
 
